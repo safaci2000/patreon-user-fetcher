@@ -12,7 +12,6 @@ module Scraper
 
     def self.fetch_user_hash_from_csv(agent)
       agent.get('https://www.patreon.com/downloadCsv?hid=')
-      csv_table = ::CSV.parse(agent.page.body)
 
       hash = {
           :names => [],
